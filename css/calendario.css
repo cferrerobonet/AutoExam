@@ -1,0 +1,30 @@
+.indentado{ text-indent: -9999px; position: absolute; line-height: 0; }
+.fc_main{position: absolute; border: 1px solid #ccc; background: #EFEFEF; padding: 4px;}
+.fc_main .wrapper-calendario{ /*border: 1px solid #ccc;*/ }
+.fc_main table{ background: #fff;}
+.fc_main table td{ padding: 4px 6px; border: 1px solid #f0f0f0; text-align: center; background: #fcfcfc; }
+
+.fc_main table tr.dias-semana td{ background: #fff; }
+.fc_main table tr.dias-semana td{ color: #000; font-size: 11px; font-family: arial, sans-serif; }
+.fc_main table tr.header td{ background: #fff url(img/calendario/bgHeaderCalendario.jpg) 0 0 repeat-x; }
+.fc_main table tr.selector td.mes-actual{ cursor: default;}
+
+.fc_main table td.fc_date:hover{ background-color: #bfd9ea;  }
+.fc_main table tr.header td.fc_date:hover{ background-color: transparent;  }
+
+.fc_main table a{ text-decoration: none; font-weight: bold; }
+.fc_main table tr.selector td{ background: #f3fafd; border-bottom-color: #cfeffc; cursor: pointer; padding: 2px 5px;}
+.fc_main table tr.selector td a{ font-size: 15px; display: block; width: 100%; height: 100%; }
+.fc_main table tr.selector td.mes-actual{ text-transform: uppercase; font-size: 12px; }
+.fc_main table tr.header td.fc_head{ border-right: 0; }
+.fc_main table tr.header td.fc_date{ border-left: 0; }
+.fc_main table tr.header td{ border-bottom-color: #ccc; }
+
+.fc_main table td.fc_head{text-transform: uppercase; font-weight: bold; font-size: 12px;}
+.fc_main table td.fc_date{ cursor: pointer;}
+/*
+.fc_main td.primera{ border-left: 0 !important; }
+.fc_main td.ultima{ border-right: 0 !important; }
+.fc_main tr.primera td{ border-top: 0 !important; }
+.fc_main tr.ultima td{ border-bottom: 0 !important; }
+*/

@@ -1,0 +1,739 @@
+@import url(base.css);
+
+
+body{background: #08b1e3 url(img/bgFondo.gif) 0 0 repeat-x; text-align: center; font-family: "Trebuchet ms", "Lucida Grande", arial, verdana, helvetica, sans-serif; color: #636363;}
+p, pre, address, li, dt, dd, th, td, caption, legend{font-size: 1.3em;}
+blockquote{font-size: 1.4em;}
+/*p img{font-size: .7692em;} */
+a img{border: 0;}
+input, select, textarea{font-family: "Trebuchet ms", verdana, arial, helvetica, sans-serif; color: #636363;}
+pre, code, samp, tt, kbd{font-family: courier, "Courier New", Courier, monospace; color: #000;} 
+
+
+/* ----------------------------------
+ESTRUCTURA
+------------------------------------*/
+#contenedor{width: 960px; padding: 0 11px; margin: 0 auto; background: transparent url(img/bgContenedor.png) 0 0 repeat-y; text-align: left;}
+#cabecera{height: 112px; background: url(img/bgCabecera.jpg) 0 0 no-repeat; margin: 0 -11px; position: relative;}
+body#home #panelIntro{height: 221px; background: url(img/panelIntro_home.jpg) 0 0 no-repeat;}
+#pie{height: 54px; background: url(img/bgPie.jpg) 0 0 no-repeat; margin: 0 -11px; position: relative;}
+#contenido{position: relative; background: #f3fafd;}
+#contenido #principal{width: 768px; float: left; background-color: #fff; height: 450px; padding-bottom: 50px;}
+	html>body #contenido #principal{height: auto; min-height: 450px;}
+#contenido #secundario{width: 160px; padding: 36px 16px 0; float: left;}
+/*#wrapper{background: url(img/panelIntro.jpg) 0 0 no-repeat; position: relative; padding-top: 99px;}*/
+#wrapper{padding-top: 0;}
+.cuerpo table.planes{ float: left;}
+
+/*body#home #principal{ width:  653px; padding: 36px 22px 25px;}*/
+body#home #principal .doble{ width: 315px; float: left; padding-right: 10px;}
+body#home #principal .ultimo{ padding-right: 0; padding-left: 10px; width: 305px; float: left;}
+body#home #principal li h3{ font-size: 15px; margin-top: 10px; margin-bottom: 0}
+      html>/*/*/body#home #principal li h3{margin-top: 0;}
+body#home #principal li p{ margin-bottom: 5px;}
+body#home #principal .doble ul{ }
+body#home #principal .doble li { background-color: #fbfbfb; border-bottom: 1px dotted #ccc; padding: 15px 10px 20px;}
+body#home #principal .doble li.alter { background-color: #fffffd; }
+body#home #principal .doble li.hover,
+body#home #principal .doble li:hover{ background-color: #FFFFC7; }
+body#home #principal .doble li.hover p img,
+body#home #principal .doble li:hover p img{ border-color: #ddd; }
+body#home #principal .doble li.hover h3 a,
+body#home #principal .doble li:hover h3 a{ color: #e01e04; }
+body#home #principal .doble li p img{ width: 50px; height: 50px; border: 5px solid #EFEEEC; float: left; clear: left; margin: 5px 10px 0 0;}
+body#home input.cTexto{ width: 185px; }
+
+/* paginas interiores */
+#principal .cuerpo{width: 710px; margin-left: 33px; margin-top: 30px;}
+
+/* ----------------------------------
+tipografias
+------------------------------------*/
+a{color: #0c9dd2;}
+a:hover{color: #e01e04;}
+p{margin-bottom: 1.6153em; line-height: 1.3846em}
+li{line-height: 1.3846em;}
+ul, ol{margin-bottom: 2.1em;}
+h2{font: normal 2.5em "Century Gothic", "Trebuchet ms", verdana, arial, sans-serif; color: #ff6629; margin: 0 0 .92em; padding-bottom: .4em; background: url(img/bgH2.gif) bottom left repeat-x;}
+h2 a{color: #ff6629; text-decoration: none;}
+h3{font: normal 1.9em "Lucida Sans", verdana, arial, sans-serif; color: #06536f; margin: 0 0 1em;}
+h3 a{color: #06536f; text-decoration: none;}
+h4 {font: bold 1.4em "Lucida Sans", verdana, arial, sans-serif; color: #61746d; margin: 0 0 .5em;}
+
+
+/* ----------------------------------
+reutilizables
+------------------------------------*/
+.left{float: left;}
+.right{float: right;}
+.a-center{ text-align: center; }
+
+
+/* ----------------------------------
+formularios
+------------------------------------*/
+.cFile{padding: .1538em .4615em; width:23em}
+.cTextoTipoServicio{padding: .1538em .4615em; border: .0769em solid #9d9d9d; background: #fbfaf6;}
+select.cTextoTipoServicio{padding: 1px 0 1px 6px; width: 210px;}
+.cTexto{padding: .1538em .4615em; border: .0769em solid #9d9d9d; background: #fbfaf6;}
+input.cTexto{width: 18em;}
+select.cTexto{padding: 1px 0 1px 6px; width: 260px;}
+textarea.cTexto{width: 413px; height: 6.8461em;}
+input.boton{width: 80px; height: 27px; background: url(img/bgBotonForm.gif) 0 1px no-repeat; color: #212121; border: 0; margin-left: 5px; cursor: pointer;}
+
+form.contacto label span{display: block; float: left; width: 11em; padding-top: 3px;}
+form.contacto label span.parrafo{display: block; float: left; width: 100%; padding-top: 3px;}
+form.contacto fieldset p{width: 100%; clear: both;}
+form.contacto fieldset p:after{content: ""; display: block; height: 0; visibility: hidden; float: left; clear: both;}
+form.contacto p.acciones{padding-left: 130px; margin-top: 10px;}
+form.contacto p.acciones input{display: block; float: left; margin-right: 8px;}
+
+form .error{border: 1px solid #da3023; background: #FFE8E8;}
+form .correcto{background: #f0f0f0; color: #acacac;}
+
+	/* mensajes informacion / acierto / error */
+div.mensajeInformativo{background-position: 0 0; background-repeat: repeat-y; position:relative; margin-bottom: 20px;}
+*:first-child+html div.mensajeInformativo{ width: 710px; clear: both; }
+div.mensajeInformativo div.top{background-position: 0 0; background-repeat: no-repeat; padding-top: 5px;}
+div.mensajeInformativo div.bottom{background-position: bottom left; background-repeat: no-repeat; padding: 0 9px 6px;}
+div.mensajeInformativo p{line-height: 20px; margin-bottom: 0; display: block; padding-left: 25px;}
+div.mensajeInformativo p span.icono{position: relative; margin-left: -12px;}
+html>body div.mensajeInformativo p span.icono{margin-left: -25px;}
+
+	/* azul informacion */
+div.informacion{background-image: url(img/mInfo.gif);}
+div.informacion div.top{background-image: url(img/tInfo.gif);}
+div.informacion div.bottom{background-image: url(img/bInfo.gif);}
+div.informacion p span.icono{display: block; float: left; padding: 0; width: 20px; height: 20px; text-indent: -99999em; background: url(img/icoInfoForm.gif) 0 0 no-repeat; overflow: hidden;}
+
+	/* verde ok */
+div.ok{background-image: url(img/mOk.gif);}
+div.ok div.top{background-image: url(img/tOk.gif);}
+div.ok div.bottom{background-image: url(img/bOk.gif);}
+div.ok p span.icono{display: block; float: left; padding: 0; width: 20px; height: 20px; text-indent: -99999em; background: url(img/icoOkForm.gif) 0 0 no-repeat; overflow: hidden;}
+
+	/* rojo error */
+div.error{background-image: url(img/mError.gif);}
+div.error div.top{background-image: url(img/tError.gif);}
+div.error div.bottom{background-image: url(img/bError.gif);}
+div.error p span.icono{display: block; float: left; padding: 0; width: 20px; height: 20px; text-indent: -99999em; background: url(img/icoErrorForm.gif) 0 0 no-repeat; overflow: hidden;}
+div.error ul{padding-left: 25px; padding-top: 4px; margin-bottom: 4px;}
+div.error ul li{color: #da3023; padding-left: 9px; background: url(img/bulletError.gif) 0 6px no-repeat; margin-bottom: 4px;}
+
+
+/* ----------------------------------
+iconos
+------------------------------------*/
+.icono{background-image: url(img/icosBlog.gif); background-repeat: no-repeat; padding-left: 20px;}
+.fecha{background-position: 0 0;}
+.tag{background-position: 0 -184px;}
+.infoPost span.fecha{padding-right: 10px;}
+span.icono{display: inline-block;}
+
+/* iconos listas menu izda */
+ul.icoPagina,
+ul.icoTick{margin-bottom: 10px;}
+ul.icoPagina li,
+ul.icoTick li{margin-bottom: 7px;}
+ul.icoPagina li a{/*padding-left: 18px; background: url(img/icoPagina.gif) 0 4px no-repeat; display: block; height: 1%;*/}
+html>body ul.icoPagina li a{height: auto;}
+/*ul.icoTick li a{padding-left: 18px; background: url(img/icoTick.gif) 0 4px no-repeat; display: block; height: 1%;}*/
+
+ul.icoPagina li{padding-left: 18px; background: url(img/icoPagina.gif) 0 4px no-repeat; display: block; height: 1%;}
+ul.icoTick li{padding-left: 18px; background: url(img/icoTick.gif) 0 4px no-repeat; display: block; height: 1%;}
+
+html>body ul.icoTick li a{height: auto;}
+/* pedro */
+ul.icoPagina li.activo a{color: #ff6629;}
+ul.icoTick li.activo a{color: #ff6629;}
+/* kus: listas con espaciado */
+ul.espaciado li{margin-bottom: 21px;}
+
+/* ----------------------------------
+home
+------------------------------------*/
+#presentacion{width: 460px; float: left; margin-left: 45px; padding-top: 35px; display: inline; position: relative;}
+#presentacion h2 {font: italic normal 1.9em "Trebuchet ms", verdana, sans-serif; color: #fff; background: none; margin-bottom: 0;}
+#presentacion h2 em{font-size: 1.3684em;}
+#presentacion h2 a{color: #fff;}
+body#home .entrada{background: url(img/bgPuntosGris.gif) bottom left no-repeat; padding-left: 11px; padding-bottom: 1px; margin-bottom: 15px;}
+body#home .ultima{background: none;}
+body#home .entrada p{margin-bottom: 0;}
+.infoPost p{font-size: 1.2em;}
+body#home .infoPost{margin-top: 10px;}
+body#home .infoPost p{margin-bottom: 1.90em;}
+.newsletterHome{padding-left: 11px;}
+
+
+
+/* citas home */
+.cita{margin-bottom: 25px; padding-top: 10px; background: url(img/bgQuote.gif) 0 0 no-repeat;}
+.cita p.info{text-align: right; margin-bottom: 0; line-height: 1; color: #666;}
+#secundario p q{line-height: 1.1; color: #212121; font-style: italic;}
+#secundario p q:after,
+#secundario p q:before{content: "";}
+
+
+/* superboton */
+#secundario #superboton{margin: 0 -9px 35px;}
+#superboton a{display: block; width: 228px; height: 58px; background: url(img/superboton.jpg) 0 0 no-repeat; text-indent: -99999em; overflow: hidden;}
+#superboton a:hover{background-position: 0 -58px;}
+
+
+/* ----------------------------------
+paginas interiores 
+------------------------------------*/
+
+/* submenu izda */
+ul#submenu{padding-bottom: .1em;}
+ul#submenu li{font-size: 1.6em; font-weight: bold; margin-bottom: 1.3125em;}
+ul#submenu li a{text-decoration: none; padding-left: 1.5em; background: url(img/tick.gif) 0 2px no-repeat;}
+ul#submenu li.activo a{color: #ff6629;}
+
+/* barra de nav lateral */
+#secundario h3{margin-top: 25px; margin-bottom: 20px;}
+#secundario form{margin-bottom: 30px;}
+
+/* blockquote */
+#principal blockquote{background: url(img/blockquote.gif) 0 0 repeat-y; position: relative; margin-bottom: 1.6153em}
+#principal blockquote .top{background: url(img/topBlockquote.gif) 0 0 no-repeat; padding-top: 12px;}
+#principal blockquote .bottom{background: url(img/bottomBlockquote.gif) bottom left no-repeat; padding-bottom: 1px;}
+#principal blockquote .centro{background: url(img/quoteBlockquote.gif) 9px 0 no-repeat; padding: 0 12px 0 85px;}
+
+
+
+/* ----------------------------------
+=cabecera
+------------------------------------*/
+h1#logo{margin: 26px 0 0 37px; float: left; display: inline;}
+h1#logo img{width: 122px; height: 76px;}
+
+/* =menuPpal */
+#menuPpal{float: right; padding: 70px 22px 0 0; margin-bottom: 0;}
+#menuPpal li{display: block; float: left; margin: 0 .4615em;}
+#menuPpal li a{font: normal 1.2307em "Lucida Sans", "Lucida Grande", verdana, arial, sans-serif; color: #fff; text-decoration: none; text-transform: lowercase; padding-right: 7px; display: block;}
+#menuPpal li a span{ padding: 4px 0 6px 7px; display: block;}
+#menuPpal li strong a{background: url(img/deMenu.gif) 100% 0 no-repeat; }
+#menuPpal li strong a span{background: url(img/izMenu.gif) 0 0 no-repeat;}
+#menuPpal li a:hover{background: url(img/deMenu.gif) 100% 0 no-repeat; }
+#menuPpal li a:hover span{background: url(img/izMenu.gif) 0 0 no-repeat;}
+
+
+
+/* ----------------------------------
+=pie
+------------------------------------*/
+#pie{}
+#pie .clear{width: 960px; padding: 0 11px;}
+#pie p{line-height: 1;}
+#pie p, #pie li a {font-size: 12px; color: #919798; text-decoration: none;}
+#pie #infoCopyright a{font-size: 12px; color: #edf8f9; text-decoration: none;}
+#pie #infoCopyright{float: left; padding-left: 10px;}
+#pie #infoCopyright p{padding-top: 8px;}
+#pie #infoCopyright a:hover{color: #edf8f9;}
+#pie div.links{overflow: hidden; height: auto; padding-right: 10px;}
+#pie div.links ul{float: right; padding-top: 6px;}
+#pie div.links li{float: left; padding: 0 9px 2px 8px; background: url(img/sepPie.gif) 100% 3px no-repeat; line-height: 1.1;}
+#pie div.links li.ultimo{background: none; padding-right: 0;}
+#pie div.links li a:hover{color: #edf8f9;}
+#pie div.links li a.rss{padding-left: 11px; background: url(img/icoRss.gif) 0 6px no-repeat;}
+
+
+/* -----------------------------------
+i-Seo
+------------------------------------ */
+	/* azul informacion */
+.i-seo div.informacion{background-image: url(img/i-seo/mInfo.gif);}
+.i-seo div.informacion div.top{background-image: url(img/i-seo/tInfo.gif);}
+.i-seo div.informacion div.bottom{background-image: url(img/i-seo/bInfo.gif);}
+
+
+	/* verde ok */
+.i-seo div.ok{background-image: url(img/i-seo/mOk.gif);}
+.i-seo div.ok div.top{background-image: url(img/i-seo/tOk.gif);}
+.i-seo div.ok div.bottom{background-image: url(img/i-seo/bOk.gif);}
+
+
+	/* rojo error */
+.i-seo div.error{background-image: url(img/i-seo/mError.gif);}
+.i-seo div.error div.top{background-image: url(img/i-seo/tError.gif);}
+.i-seo div.error div.bottom{background-image: url(img/i-seo/bError.gif);}
+
+
+
+/* -----------------------------------
+caracteristicas home
+------------------------------------ */
+ul.caracteristicas li{font-size: 12px; list-style: disc; margin-left: 20px;}
+ul.caracteristicas li ul{ margin-bottom: 0; }
+ul.caracteristicas li ul li{ list-style: disc; font-size: 12px; list-style: circle;}
+
+.bloque-caracteristicas{ background: #fffedf; } /* color de antes: #FFE8bC; */
+.bloque-caracteristicas p{ font-size: 12px; }
+
+
+
+
+
+
+
+
+/* chapus rapidas */
+.pantallaLogin{ clear: left !important; }
+input[type="button"], button{ cursor: pointer; }
+
+
+
+
+/* ---------------------------------------------------------------------------
+p newsletter home
+--------------------------------------------------------------------------- */
+.paddLeft11{ padding-left: 11px; }
+
+/* ---------------------------------------------------------------------------
+tablas de seo
+--------------------------------------------------------------------------- */
+#seo_table {
+  margin:30px;
+}
+#seo_table td {
+  padding:2px 10px;
+}
+#seo_table td.derecha {
+  text-align: right;
+}
+
+/* ---------------------------------------------------------------------------
+tablas de QLS
+--------------------------------------------------------------------------- */
+#qls_table {
+  margin:20px;
+}
+#qls_table td {
+  padding:6px;
+}
+#qls_table_mini {
+  margin:0px;
+}
+#qls_table_mini td {
+  padding:3px;
+}
+#qls_table_mini td.centro {
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------------------------
+Temporal de seo david
+--------------------------------------------------------------------------- */
+.cajaerrorseo{
+	background-color: #F19DA0;
+	padding:3px;
+	border-color:red;
+}
+
+.cajaokseo{
+	background-color: #D0DF99;
+	padding:3px;
+	border-color:green;
+}
+
+.errorseo{
+	color:red;
+}
+
+.warningseo{
+}
+
+.okseo{
+}
+
+.center{text-align: center;}
+.center table {margin-left: auto; margin-right: auto; text-align: left;}
+/*.center .otracosa{margin-left: auto; margin-right: auto; text-align: left;}*/
+
+.gestionDominios{
+	/*border:medium outset;*/
+	width:90%;
+	margin-bottom:20px;
+}
+
+.todo{
+ width:100%;
+}
+
+.tabla_planes th{
+        border: 1px solid #cccccc;
+        background-color: #F3FAFD;
+	padding:10px;
+ 	font-size:16px;
+} 
+.tabla_planes td{
+        border: 1px solid #cccccc;
+	padding:5px;
+} 
+
+.gestionBacklinksPrivados{
+	width:100%;
+	margin-bottom:20px;
+}
+
+.gestionBacklinksPrivados table{
+	float:left;
+}
+.gestionBacklinksPrivados table th{
+color:grey;
+font-size:12px;
+font-weight:bolder;
+padding-bottom:4px;
+padding-top:4px;
+text-align:left;
+}
+
+.gestionBacklinksPrivados table tr{
+	
+}
+
+.gestionDominios table td.derecha {
+  text-align: right;
+}
+
+.gestionBacklinksPrivados table th.derecha {
+  text-align: right;
+}
+
+.gestionBacklinksPrivados table td.center {
+  text-align: center;
+}
+
+.gestionBacklinksPrivados .tdInforme{
+	padding-bottom:3px;
+	padding-top:2px;
+	text-align: right;
+}
+
+.gestionBacklinksPrivados .boton{
+	text-align:center;
+	width:30px;
+}
+
+.gestionBacklinksPrivados .tr2{
+	background:#eeeeee none repeat scroll 0 0;
+}
+
+.gestionBacklinksPrivados .noContratado{
+	background:#ffbbbb none repeat scroll 0 0;
+}
+
+.gestionBacklinksPrivados table th a{text-decoration:none}
+
+.gestionBacklinksPrivados table th.palabraInforme{padding-left:10px}
+
+.gestionBacklinksPrivados table td.palabraInforme{padding-left:10px}
+
+.gestionBacklinksPrivados table td{padding:0px 2px 0px 2px}
+
+.titulo {
+	text-align:left;
+        width:90%;
+	color:#FF6629;
+	font-size:18px;
+	margin-bottom:10px;
+	margin-top:30px;
+}
+
+.gestionDominios table{
+	float:left;
+}
+.gestionDominios table th{
+color:grey;
+font-size:12px;
+font-weight:bolder;
+padding-bottom:4px;
+padding-top:4px;
+text-align:left;
+}
+
+.gestionDominios table tr{
+	height: 25px;
+}
+
+.gestionDominios table td.derecha {
+  text-align: right;
+}
+
+.gestionDominios table th.derecha {
+  text-align: right;
+}
+
+.gestionDominios table th.center {
+  text-align: center;
+}
+
+.gestionDominios table.bordeTabla{
+	/*border: solid;*/
+}
+
+.gestionDominios table.bordeTabla td{
+	border: 1px solid #cccccc;
+	padding: 2px 0 2px 0;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.gestionDominios table.bordeTabla th{
+	border: 1px solid #cccccc;
+	background-color: #F3FAFD;
+}
+
+.gestionDominios table td.center {
+  text-align: center;
+}
+
+.gestionDominios .tdInforme{
+	padding-bottom:3px;
+	padding-top:2px;
+	text-align: right;
+}
+
+button.botonForm{
+	outline: none; background: none; white-space: nowrap; overflow: visible;
+	text-decoration: none; border: 0; cursor: pointer; font-size: 12px; color:green;
+}
+
+.gestionDominios .boton{
+	text-align:center;
+}
+
+.gestionDominios .tr2{
+	background:#eeeeee none repeat scroll 0 0;
+}
+
+.tr2{
+	background:#eeeeee none repeat scroll 0 0;
+}
+
+.gestionDominios .noContratado{
+	background:#ffbbbb none repeat scroll 0 0;
+}
+
+.notas {
+background-color:#eeeeee;
+padding-bottom:10px;
+margin-bottom:30px;
+margin-right:70px;
+margin-top:15px;
+padding-top:10px;
+width:80%;
+overflow:auto;
+font-size:12px;
+max-height:100px;
+}
+
+.texto_notas{
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-rigth:10px;
+}
+
+.maxNotas {
+		
+}
+
+.botonNotas {
+margin-top:10px;
+margin-bottom:10px;
+font-size:12px;
+}
+
+.gestionDominios table td.volumen0, .gestionDominios table td.volumen5, .gestionDominios table td.volumen10, .volumen15, .volumen20, .volumen25, .volumen30, .volumen35, .volumen40, .volumen45, .volumen50, .volumen55, .volumen60, .volumen65, .volumen70, .volumen75, .volumen80, .volumen85, .volumen90, .volumen95, .volumen100 {
+ text-align: center;
+}
+
+.gestionDominios table th a{text-decoration:none;}
+
+.gestionDominios table th.palabraInforme{padding-left:10px;
+padding-bottom:10px;}
+
+.gestionDominios table th.palabraInforme a{margin-top:3px;}
+
+
+.gestionDominios table td.palabraInforme{padding-left:10px}
+
+.gestionDominios table th.thVolumen{text-align:center}
+
+.gestionDominios table td.volumen {padding: 1px 0 1px 10px; width: 70px}
+
+.gestionDominios table td.volumen span {display:block; text-indent:-9999em; background:#0C9DD2 url(../iconos/progreso.gif) repeat-y; width: 60px; border: 1px solid #CCCCCC}
+
+.gestionDominios table td.volumen0 span {}
+.gestionDominios table td.volumen5 span{background-position:3px 0;}
+.gestionDominios table td.volumen10 span{background-position:6px 0;}
+.gestionDominios table td.volumen15 span{background-position:9px 0;}
+.gestionDominios table td.volumen20 span{background-position:12px 0;}
+.gestionDominios table td.volumen25 span{background-position:15px 0;}
+.gestionDominios table td.volumen30 span{background-position:18px 0;}
+.gestionDominios table td.volumen35 span{background-position:21px 0;}
+.gestionDominios table td.volumen40 span{background-position:24px 0;}
+.gestionDominios table td.volumen45 span{background-position:27px 0;}
+.gestionDominios table td.volumen50 span{background-position:30px 0;}
+.gestionDominios table td.volumen55 span{background-position:33px 0;}
+.gestionDominios table td.volumen60 span{background-position:36px 0;}
+.gestionDominios table td.volumen65 span{background-position:39px 0;}
+.gestionDominios table td.volumen70 span{background-position:42px 0;}
+.gestionDominios table td.volumen75 span{background-position:45px 0;}
+.gestionDominios table td.volumen80 span{background-position:48px 0;}
+.gestionDominios table td.volumen85 span{background-position:51px 0;}
+.gestionDominios table td.volumen90 span{background-position:54px 0;}
+.gestionDominios table td.volumen95 span{background-position:57px 0;}
+.gestionDominios table td.volumen100 span{background-position:60px 0;}
+
+.pantallaLogin {
+	position: absolute;
+}
+
+.usuariopasserror{
+	position: relative;
+}
+
+.muerteMargen{
+	margin-bottom:0px!important;
+}
+
+.safari{
+	margin-top:10px;
+}
+
+.selectGrafico{
+	margin-bottom: 20px;
+	font-size: 10px;
+}
+
+.selectGraficoDerecha{
+	margin-bottom: 20px;
+	font-size: 10px;
+}
+
+.selectGrafico table th{
+	padding-bottom:4px;
+	padding-left:5px;
+}
+
+.selectGraficoDerecha table th{
+	padding-bottom:4px;
+	padding-left:5px;
+}
+
+.selectGraficoDerecha table td{
+	height:25px;
+	width:70px;
+}
+
+.abrirCandado{
+margin-left:50px;
+}
+
+.abrirCandado a{
+display: block; width: 16px; height: 16px;
+background: url(../iconos/lock.gif) 0 0 no-repeat;
+}
+
+.abrirCandado a:hover{
+display: block; width: 16px; height: 16px;
+background: url(../iconos/lock_open.gif) 0 0 no-repeat;
+}
+
+
+.editarAlertas{
+	font-size:10px;
+}
+
+.editarAlertas td{
+height:30px;
+padding:10px;
+text-align:right;
+}
+
+.editarAlertas .descripcionAlerta{
+font-style:italic;
+text-align:left;
+}
+
+.formPrimerDominio{
+}
+
+.formPrimerDominio input{
+  font-size:15px;
+  height:20px;
+  margin:10px 15px 20px 60px;
+  width:200px;
+}
+
+.formPrimerDominio select{
+  font-size:15px;
+  margin:10px 15px 20px 5px;
+}
+
+.botonAzul{
+float:right;
+margin-bottom:20px;
+margin-right:35px;
+margin-top:-48px;
+font-size:15px;
+}
+
+.zonaNaranja {
+	height:30px;
+background: url(img/panelIntro_home.jpg) 0 0 no-repeat;
+	color:black;
+}
+
+.zonaNaranja table {
+	margin:4px;
+	font-size:11px;
+}
+
+.zonaNaranja table tr td select{
+	color:#666666;
+	font-size:12px;
+}
+
+.zonaNaranja table tr td a{
+	text-decoration:none;
+	color:black;
+	font-size:14px;
+}
+
+.zonaNaranja table tr td a.seleccionado{
+	text-decoration:none;
+	color:white;
+	font-size:14px;
+}
+
+.alertaActiva a{
+	color:green;
+	text-decoration:none;
+}
+
+.alertaInactiva a{
+	color:orange;
+	text-decoration:none;
+}
+
+.alertaNoDisponible a{
+	text-decoration:none;
+}
+
+.dominioColSeo{
+	font-size:12px;
+	margin-bottom:10px;
+}
+
+A:link.logo, A:visited.logo { text-decoration: none }
+
+.reloj{
+position:fixed;
+top:130px;
+bottom: 100px;
+}

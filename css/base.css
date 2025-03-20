@@ -1,0 +1,44 @@
+/* ----------------------------------------------
+Reseteado navegador
+------------------------------------------------*/
+*{margin: 0; padding: 0; outline: 0; font-size: 100%;}
+body{line-height: 1; background: #fff;}
+ol, ul{list-style: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+caption, th, td {text-align: left; font-weight: normal;}
+h1, h2, h3, h4, h5, h6{font-weight: normal;}
+fieldset{border: 0;}
+
+/* ----------------------------------------------
+Ajuste multinavegador 1em = 10px
+------------------------------------------------*/
+html{ font-size: 125%; }
+body{ font-size: .5em; }
+
+/* ----------------------------------------------
+Ajuste tamano relativo de elementos
+de bloque contenidos en otros elementos de bloque
+------------------------------------------------*/
+li p, li li, li address, li dt, li dd,
+dd p, dd li, 
+td p, td li, th p, th li, td dt, td dd, th dt, th dd,
+address p, address li,
+blockquote p, blockquote li, blockquote pre, blockquote dt, blockquote dd,
+h1, h2, h3, h4, h5, h6
+{font-size: 1em;}
+
+
+/* ----------------------------------------------
+Limpiar flotaciones
+------------------------------------------------*/
+.clear:after{content: ""; display: block; clear: both; height: 0; visibility: hidden;}
+.clear{min-height: 0;}
+* .clear{ height: 1%; }
+
+/* ----------------------------------------------
+Ocultacion elementos 
+------------------------------------------------*/
+.invisible{position: absolute; left: -99999em; text-indent: -99999em; line-height: 0;}
+.oculto{display: none;}
+
+
